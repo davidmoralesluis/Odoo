@@ -16,3 +16,6 @@ Esto descarga las 2 imagenes antes mencionados.
 Cuanto se esta ejecutando, abrimos en el navegador 'http://localhost:8069'
 
 ![Captura de pantalla de 2023-06-01 11-00-42](https://github.com/davidmoralesluis/Odoo/assets/91198406/b569d984-5fef-4173-b73d-4895ad1d7401)
+
+Si el puerto 5432 en tu ordenador ya esta ocupado se producira un conflicto al intentar ejecutar el contenedor. 
+Lo podemos solucionar cambiando el puerto en el 'docker-compose.yml'.
