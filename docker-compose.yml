@@ -1,0 +1,22 @@
+version: '3'
+services:
+  db:
+    image: postgres:12
+    environment:
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_DB=postgres
+  web:
+    image: odoo:14
+    depends_on:
+      - db
+    ports:
+      - "8069:8069"
+    environment:
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_DB=postgres
+      - PGHOST=db
+      - PGUSER=odoo
+      - PGPASSWORD=odoo
+      - PGDATABASE=postgres
